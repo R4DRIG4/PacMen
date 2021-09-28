@@ -4,7 +4,7 @@ Muchos recordaran el mundialmente conocido juego de Pacman, si te entretuviste c
 ## Uso.
 Para comenzar a ejecutar este proyecto en su máquina debe presionar Add para que puedas generar los Pacman y luego presionar Start para que comiencen a moverse.
 ## Roadmap.
-A futuro seria interesante cambiar el color de los pacman que se crean.
+A futuro sería interesante cambiar el color de los pacman que se crean.
 ## Licencia.
 MIT License
 
