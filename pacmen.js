@@ -1,9 +1,7 @@
-let pos = 0;
 const pacArray = [
   ['./images/PacMan1.png', './images/PacMan2.png'],
   ['./images/PacMan3.png', './images/PacMan4.png'],
 ];
-let direction = 0;
 const pacMen = []; // This array holds all the pacmen
 
 // This function returns an object with random values
@@ -47,10 +45,9 @@ function update() {
   // loop over pacmen array and move each one and move image in DOM
   pacMen.forEach((item) => {
     checkCollisions(item);
-        direction = item.velocity.x > 0 ? 0 : 1;
+    direction = item.velocity.x > 0 ? 0 : 1;
     item.newimg.src = pacArray[direction][item.focus];
     item.focus = (item.focus + 1) % 2;
-
     item.position.x += item.velocity.x;
     item.position.y += item.velocity.y;
 
@@ -62,7 +59,7 @@ function update() {
 
 function checkCollisions(item) {
   // TODO: detect collision with all walls and make pacman bounce
-    let imgWidth = item.newimg.width;
+  let imgWidth = item.newimg.width;
   let imgHeight = item.newimg.height;
   let pageWidth = window.innerWidth;
   let pageHeight = window.innerHeight;
@@ -73,14 +70,12 @@ function checkCollisions(item) {
     item.velocity.x *= -1;
   }
 
-
   if((item.position.y + imgHeight) >= pageHeight){
     item.velocity.y *= -1;
   }
   else if(item.position.y < 0){
     item.velocity.y *= -1;
   }
-
 }
 
 function makeOne() {
